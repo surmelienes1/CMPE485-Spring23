@@ -7465,3 +7465,84 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1356.652869 seconds.
+  path: Assets/Scripts/CameraFollow.cs
+  artifactKey: Guid(4bf0e443ffcb84911978d693b75b26ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraFollow.cs using Guid(4bf0e443ffcb84911978d693b75b26ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2613ca88fde2c87ef265d485897f9165') in 0.008208 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001327 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16ef87000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/muhammedenessurmeli/Documents/GitHub/CMPE485-Spring23/HW#1/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/muhammedenessurmeli/Documents/GitHub/CMPE485-Spring23/HW#1/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.565 seconds
+Domain Reload Profiling:
+	ReloadAssembly (565ms)
+		BeginReloadAssembly (84ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (424ms)
+			LoadAssemblies (32ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (168ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (168ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (36ms)
+				ProcessInitializeOnLoadAttributes (115ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Callback registration failed. Increase kMaxCallback.
+Fatal Error! Callback registration failed. Increase kMaxCallback.
+Obtained 31 stack frames.
+#0  0x0000018814e1b0 in __pthread_kill
+#1  0x415f8001880be2c8 in abort
+#2  0xfd0e80010384d100 in _GLOBAL__sub_I_BugReportingTools.mm
+#3  0x0000010261a908 in EditorMonoConsole::LogToConsoleImplementation(CppLogEntry&)
+#4  0x0000010261a094 in EditorMonoConsole::LogToConsoleImplementation(DebugStringToFileData const&)
+#5  0x0000010261b4e8 in LogToConsoleImplementation(DebugStringToFileData const&)
+#6  0x000001032a89ac in DebugStringToFilePostprocessedStacktrace(DebugStringToFileData const&)
+#7  0x000001032a8f30 in DebugStringToFile(DebugStringToFileData const&)
+#8  0x0000010201651c in CallbackArrayBase<void (*)(BuildTargetPlatform), void (*)(void const*, BuildTargetPlatform)>::Register(void (*)(BuildTargetPlatform), void (*)(void const*, BuildTargetPlatform), void const*)
+#9  0x000001026f3420 in LoadDomainAndUserAssemblies()
+#10 0x000001026f549c in LoadUserAssemblies()
+#11 0x00000102f2038c in AssetImportWorkerClient::ReloadMonoDomain(AssetResolver&)
+#12 0x00000102f2ff00 in invocation function for block in AssetImportWorkerClient::HandleMessage(PrepareMessage const&)::$_4::operator()() const
+#13 0x00000187ffe504 in _dispatch_client_callout
+#14 0x4d6200018800db74 in _dispatch_async_and_wait_invoke
+#15 0x1029800187ffe504 in _dispatch_client_callout
+#16 0xe60780018800cd1c in _dispatch_main_queue_drain
+#17 0xa93380018800c96c in _dispatch_main_queue_callback_4CF
+#18 0xc14e0001882a5d50 in __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__
+#19 0x5e328001882637d0 in __CFRunLoopRun
+#20 0x8872000188262888 in CFRunLoopRunSpecific
+#21 0x795b000191937fa0 in RunCurrentEventLoopInMode
+#22 0xf851800191937de4 in ReceiveNextEventCommon
+#23 0xd10f800191937b2c in _BlockUntilNextEventMatchingListInModeWithFilter
+#24 0xb27600018b4e4424 in _DPSNextEvent
+#25 0x3b3300018b4e35b4 in -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]
+#26 0x660b80018b4d79e4 in -[NSApplication run]
+#27 0x140680018b4aee28 in NSApplicationMain
+#28 0x872100010385c8c0 in EditorMain(int, char const**)
+#29 0x0000010385cbf8 in main
+#30 0x00000187e5be50 in start
