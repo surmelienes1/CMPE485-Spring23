@@ -349,6 +349,7 @@
 "Assets/Scripts/AddForceUpperBackLeft.cs"
 "Assets/Scripts/MoveObject.cs"
 "Assets/Scripts/SpawnObject.cs"
+"Assets/Scripts/TheDarkLord.cs"
 -langversion:9.0
 
 /deterministic
