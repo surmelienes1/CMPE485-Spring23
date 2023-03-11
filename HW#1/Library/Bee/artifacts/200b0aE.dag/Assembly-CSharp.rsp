@@ -347,6 +347,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/AddForceToRigidbody.cs"
 "Assets/Scripts/AddForceUpperBackLeft.cs"
+"Assets/Scripts/KratosMoving.cs"
 "Assets/Scripts/MoveObject.cs"
 "Assets/Scripts/SpawnObject.cs"
 "Assets/Scripts/TheDarkLord.cs"
