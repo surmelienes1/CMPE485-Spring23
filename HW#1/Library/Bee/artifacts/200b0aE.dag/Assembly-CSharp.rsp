@@ -348,6 +348,7 @@
 "Assets/Scripts/AddForceToRigidbody.cs"
 "Assets/Scripts/AddForceUpperBackLeft.cs"
 "Assets/Scripts/MoveObject.cs"
+"Assets/Scripts/SpawnObject.cs"
 -langversion:9.0
 
 /deterministic
