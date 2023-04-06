@@ -345,17 +345,9 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/AurynSky/Dungeon Pack/Scripts/SpikeTrapDemo.cs"
+"Assets/AurynSky/Dungeon Pack/Scripts/TrapDoorDemo.cs"
 "Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
-"Assets/MazeGenerator/Scripts/BasicMazeGenerator.cs"
-"Assets/MazeGenerator/Scripts/DivisionMazeGenerator.cs"
-"Assets/MazeGenerator/Scripts/MazeCell.cs"
-"Assets/MazeGenerator/Scripts/MazeSpawner.cs"
-"Assets/MazeGenerator/Scripts/OldestTreeMazeGenerator.cs"
-"Assets/MazeGenerator/Scripts/RandomTreeMazeGenerator.cs"
-"Assets/MazeGenerator/Scripts/RecursiveMazeGenerator.cs"
-"Assets/MazeGenerator/Scripts/RecursiveTreeMazeGenerator.cs"
-"Assets/MazeGenerator/Scripts/RollerBall.cs"
-"Assets/MazeGenerator/Scripts/TreeMazeGenerator.cs"
 -langversion:9.0
 
 /deterministic
