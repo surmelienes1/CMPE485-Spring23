@@ -348,6 +348,7 @@
 "Assets/AurynSky/Dungeon Pack/Scripts/SpikeTrapDemo.cs"
 "Assets/AurynSky/Dungeon Pack/Scripts/TrapDoorDemo.cs"
 "Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
+"Assets/SciFi_Door/Script/door.cs"
 -langversion:9.0
 
 /deterministic
