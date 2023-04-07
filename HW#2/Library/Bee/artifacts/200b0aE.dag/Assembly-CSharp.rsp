@@ -349,6 +349,7 @@
 "Assets/AurynSky/Dungeon Pack/Scripts/TrapDoorDemo.cs"
 "Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
 "Assets/Scenes/BackgroundMusic.cs"
+"Assets/Scenes/SoundManager.cs"
 "Assets/SciFi_Door/Script/door.cs"
 "Assets/Supercyan Character Pack Free Sample/Scripts/DemoFree.cs"
 "Assets/Supercyan Character Pack Free Sample/Scripts/FreeCameraLogic.cs"
