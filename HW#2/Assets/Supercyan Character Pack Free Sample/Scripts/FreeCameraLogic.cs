@@ -5,9 +5,9 @@ public class FreeCameraLogic : MonoBehaviour
 {
 
     private Transform m_currentTarget = null;
-    private float m_distance = 2f;
-    private float m_height = 1;
-    private float m_lookAtAroundAngle = 180;
+    private float m_distance = 10f;
+    private float m_height = 2;
+    private float m_lookAtAroundAngle = -90;
 
     [SerializeField] private List<Transform> m_targets = null;
     private int m_currentIndex = 0;
