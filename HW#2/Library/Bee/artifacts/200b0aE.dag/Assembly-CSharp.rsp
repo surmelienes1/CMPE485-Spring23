@@ -354,6 +354,7 @@
 "Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
 "Assets/Scenes/BackgroundMusic.cs"
 "Assets/Scenes/CameraFollow.cs"
+"Assets/Scenes/DestroyObject.cs"
 "Assets/Scenes/ObstaclePush.cs"
 "Assets/Scenes/SoundManager.cs"
 "Assets/Scenes/ThirdPersonCam.cs"
