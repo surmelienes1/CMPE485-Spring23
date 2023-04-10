@@ -2,14 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DestroyObject : MonoBehaviour
 {
+    public System.DateTime startTime;
+
+    public GameOverScreen GameOverScreen;
+
+    void Start () {
+        startTime = System.DateTime.UtcNow;
+    }
 
     void Update()
     {
         if(this.transform.position.y <= -10) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Destroy(gameObject);
+            GameOverScreen.Setup(0);
         }
     } 
 
@@ -19,7 +28,8 @@ public class DestroyObject : MonoBehaviour
         if(collision.gameObject.CompareTag("Spike"))
         {
             Debug.Log("I am dead");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Destroy(gameObject);
+            GameOverScreen.Setup(0);
         }
     }
 }

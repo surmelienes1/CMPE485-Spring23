@@ -7,6 +7,13 @@ TagManager:
   - SF_Door
   - Spike
   - Key
+  - SoundButton
+  - Trap
+  - WarningSign
+  - Trap2
+  - Trap3
+  - Trap4
+  - WarningSign2
   layers:
   - Default
   - TransparentFX
