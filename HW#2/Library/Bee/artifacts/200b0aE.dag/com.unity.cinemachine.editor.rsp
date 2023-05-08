@@ -350,8 +350,6 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/ExternalAssets/Plugins/Demigiant/DOTween/DOTween.dll"
--analyzer:"Assets/ExternalAssets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 "Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Editors/Cinemachine3rdPersonFollowEditor.cs"
 "Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Editors/CinemachineBasicMultiChannelPerlinEditor.cs"
 "Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Editors/CinemachineBlenderSettingsEditor.cs"

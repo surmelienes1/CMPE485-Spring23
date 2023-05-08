@@ -337,8 +337,6 @@
 -r:"Assets/ExternalAssets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/ExternalAssets/Plugins/Demigiant/DOTween/DOTween.dll"
--analyzer:"Assets/ExternalAssets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Activation/ActivationMixerPlayable.cs"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Activation/ActivationPlayableAsset.cs"
 "Library/PackageCache/com.unity.timeline@1.6.4/Runtime/Activation/ActivationTrack.cs"

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SF_Door
+  - Spike
+  - Key
+  - SoundButton
+  - Trap
+  - WarningSign
+  - Trap2
+  - Trap3
+  - Trap4
+  - WarningSign2
+  - Carrie
+  - BananaJoe
+  - Penny
+  - Patrick
+  - myPlayer
+  - Darwin
+  - Gumball
+  - Joanna
+  - Daisy
+  - Anais
+  - Nicole
+  - Richard
+  - Yuki
+  - Lucy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
