@@ -18,6 +18,8 @@ public class DestroyObject : MonoBehaviour
 
     public GameObject Richard;
 
+    public Material otherSkybox; // assign via inspector
+
     void Start () {
         startTime = System.DateTime.UtcNow;
     }
@@ -92,6 +94,11 @@ public class DestroyObject : MonoBehaviour
 
             transform.position = new Vector3(-325f,9.5f,-285f);
 
+        }
+        else if(collision.gameObject.CompareTag("Teleport")){
+            RenderSettings.skybox = otherSkybox;
+            DynamicGI.UpdateEnvironment();
+            transform.position = new Vector3(0, 5.4f, 0);
         }
 
     }

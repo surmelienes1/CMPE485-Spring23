@@ -28,6 +28,9 @@ TagManager:
   - Richard
   - Yuki
   - Lucy
+  - SpaceDoor
+  - SF_Door2
+  - Teleport
   layers:
   - Default
   - TransparentFX
