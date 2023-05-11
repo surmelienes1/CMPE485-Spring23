@@ -100,6 +100,10 @@ public class DestroyObject : MonoBehaviour
             DynamicGI.UpdateEnvironment();
             transform.position = new Vector3(0, 5.4f, 0);
         }
+        else if(collision.gameObject.CompareTag("Zombie")){
+            Destroy(gameObject);
+            GameOverScreen.Setup(-3);
+        }
 
     }
 }

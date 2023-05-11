@@ -37,6 +37,14 @@ public class GameOverScreen : MonoBehaviour
             pointsText.text = "You are Trapped!";
 
         }
+        else if(time == -3){
+
+            myButton.SetActive(false);
+
+            textStatus.text = "GAME OVER";
+    
+            pointsText.text = "You are Eaten by a Zombie!";
+        }
         else if(time == -1){
 
             textStatus.text = "WRONG CHOICE!";
