@@ -70,9 +70,7 @@ public class DestroyObject : MonoBehaviour
                 Richard = GameObject.FindWithTag("Richard");
                 Richard.transform.position = new Vector3(10f,6.4f,-182f);
             }
-            System.TimeSpan ts = System.DateTime.UtcNow - startTime;
 
-            GameOverScreen.Setup(ts.TotalSeconds);
             transform.position = new Vector3(20f, 6.4f, -168f);
         }
         else if(collision.gameObject.CompareTag("Gumball")){

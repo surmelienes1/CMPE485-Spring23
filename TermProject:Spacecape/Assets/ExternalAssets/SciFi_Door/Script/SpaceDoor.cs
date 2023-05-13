@@ -9,19 +9,14 @@ public class SpaceDoor : MonoBehaviour {
 
 	GameObject thedoor;
 
-    public GameOverScreen GameOverScreen;
-
-    public System.DateTime startTime;
-
     void Start () {
-        startTime = System.DateTime.UtcNow;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("myPlayer"))
         {
-            thedoor= GameObject.FindWithTag("SF_Door");
+            thedoor= GameObject.FindWithTag("SF_DoorSpace");
             thedoor.GetComponent<Animation>().Play("Spaceopen");
         }
         
@@ -32,7 +27,7 @@ public class SpaceDoor : MonoBehaviour {
         if(other.gameObject.CompareTag("myPlayer"))
         {
 
-            thedoor= GameObject.FindWithTag("SF_Door");
+            thedoor= GameObject.FindWithTag("SF_DoorSpace");
             thedoor.GetComponent<Animation>().Play("Spaceclose");
     
         }

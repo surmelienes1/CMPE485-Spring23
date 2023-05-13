@@ -32,6 +32,7 @@ TagManager:
   - SF_Door2
   - Teleport
   - Zombie
+  - SF_DoorSpace
   layers:
   - Default
   - TransparentFX

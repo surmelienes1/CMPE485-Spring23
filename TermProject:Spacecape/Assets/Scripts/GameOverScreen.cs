@@ -15,6 +15,10 @@ public class GameOverScreen : MonoBehaviour
 
     public GameObject myButton;
 
+    public AudioClip newTrack;
+
+    private AudioManager theAM;
+
     public void Setup(double time) {
         
         gameObject.SetActive(true);
@@ -62,15 +66,36 @@ public class GameOverScreen : MonoBehaviour
 
     }
 
+    void Start()
+    {
+
+        theAM = FindObjectOfType<AudioManager>();
+        
+    }
+
     public void RestartButton(){
+        Debug.Log("Switching music");
+        if(newTrack != null)
+        {
+            theAM.ChangeBGM(newTrack);
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ExitButton(){
+        if(newTrack != null)
+        {
+            theAM.ChangeBGM(newTrack);
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("MainMenuScene");
     }
 
     public void ExploreButton(){
+        if(newTrack != null)
+        {
+            theAM.ChangeBGM(newTrack);
+        }
         Destroy(GameObject.FindWithTag("Trap"));
         Destroy(GameObject.FindWithTag("Trap2"));
         Destroy(GameObject.FindWithTag("Trap3"));
