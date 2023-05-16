@@ -33,6 +33,12 @@ TagManager:
   - Teleport
   - Zombie
   - SF_DoorSpace
+  - CircleStation
+  - CoinText
+  - SpaceDoor2
+  - SpaceDoor3
+  - Kratos
+  - Zeus
   layers:
   - Default
   - TransparentFX

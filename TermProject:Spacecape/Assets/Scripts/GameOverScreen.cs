@@ -96,6 +96,10 @@ public class GameOverScreen : MonoBehaviour
         {
             theAM.ChangeBGM(newTrack);
         }
+        GameObject[] zombies = GameObject.FindGameObjectsWithTag("Zombie");
+        foreach(GameObject zombie in zombies)
+        GameObject.Destroy(zombie);
+        Destroy(GameObject.FindWithTag("Zombie"));
         Destroy(GameObject.FindWithTag("Trap"));
         Destroy(GameObject.FindWithTag("Trap2"));
         Destroy(GameObject.FindWithTag("Trap3"));

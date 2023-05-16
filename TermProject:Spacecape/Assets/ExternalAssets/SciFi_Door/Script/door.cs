@@ -8,6 +8,7 @@ using System;
 public class door : MonoBehaviour {
 
 	GameObject thedoor;
+    public AudioClip doorOpen;
 
     void Start () {
     }
@@ -19,7 +20,7 @@ public class door : MonoBehaviour {
             
 			thedoor= GameObject.FindWithTag("SF_Door");
 			thedoor.GetComponent<Animation>().Play("open");
-
+            AudioSource.PlayClipAtPoint(doorOpen, collision.transform.position);
             Destroy(GameObject.FindWithTag("Key"));
         }
     }

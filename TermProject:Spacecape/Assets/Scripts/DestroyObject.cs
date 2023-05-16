@@ -10,18 +10,42 @@ public class DestroyObject : MonoBehaviour
 
     public GameOverScreen GameOverScreen;
 
-    public GameObject Darwin;
-
-    public GameObject Anais;
-
-    public GameObject Nicole;
-
-    public GameObject Richard;
-
     public Material otherSkybox; // assign via inspector
+
+    public Material defaultSkybox; // assign via inspector
+
+    public AudioClip newTrack; 
+
+    private AudioManager theAM;
+
+    public GameObject portal;
+
+    public GameObject coinText;
+
+    public AudioClip eatingSound;
+
+    public AudioClip kratosSound;
 
     void Start () {
         startTime = System.DateTime.UtcNow;
+        theAM = FindObjectOfType<AudioManager>();
+        portal.SetActive(false);
+        coinText.SetActive(false);
+        GameObject kratos = GameObject.FindWithTag("Kratos");
+        if (kratos != null)
+        {
+            Vector3 position = kratos.transform.position;
+            StartCoroutine(GoW(position));
+        }
+    }
+
+    IEnumerator GoW(Vector3 position)
+    {
+        while (true)
+        {
+            AudioSource.PlayClipAtPoint(kratosSound, position);
+            yield return new WaitForSeconds(20f);
+        }
     }
 
     void Update()
@@ -29,6 +53,24 @@ public class DestroyObject : MonoBehaviour
         if(this.transform.position.y <= -10) {
             Destroy(gameObject);
             GameOverScreen.Setup(0);
+        }
+
+        GameObject circleStation = GameObject.FindWithTag("CircleStation");
+        if (circleStation != null)
+        {
+            float dist = Vector3.Distance(transform.position, circleStation.transform.position);
+            if(dist < 2f){
+                System.TimeSpan ts = System.DateTime.UtcNow - startTime;
+                GameOverScreen.Setup(ts.TotalSeconds);
+                RenderSettings.skybox = defaultSkybox;
+                DynamicGI.UpdateEnvironment();
+                transform.position = new Vector3(300f, 197.3f, 297f);
+                Debug.Log("Switching music");
+                if(newTrack != null)
+                {
+                    theAM.ChangeBGM(newTrack);
+                }
+            }
         }
     } 
 
@@ -44,33 +86,28 @@ public class DestroyObject : MonoBehaviour
             GameOverScreen.Setup(-1);
         }
         else if(collision.gameObject.CompareTag("Penny")){
-            if(Darwin == null){
-                Darwin = GameObject.FindWithTag("Darwin");
-                Darwin.transform.position = new Vector3(25f,5.7f,-178f);
-            }
+
+            GameObject.FindWithTag("Darwin").transform.position = new Vector3(25f,5.7f,-178f);
+
             transform.position = new Vector3(20f, 6.4f, -168f);
         }
-        else if(collision.gameObject.CompareTag("BananaJoe"))
-        {
-            if(Anais == null){
-                Anais = GameObject.FindWithTag("Anais");
-                Anais.transform.position = new Vector3(20f,5.3f,-180f);
-            }
+        else if(collision.gameObject.CompareTag("BananaJoe")){
+
+            GameObject.FindWithTag("Anais").transform.position = new Vector3(20f,5.3f,-180f);
+
             transform.position = new Vector3(20f, 6.4f, -168f);
         }
         else if(collision.gameObject.CompareTag("Daisy")){
-            if(Nicole == null){
-                Darwin = GameObject.FindWithTag("Nicole");
-                Darwin.transform.position = new Vector3(15f,6.2f,-182f);
-            }
+
+            GameObject.FindWithTag("Nicole").transform.position = new Vector3(15f,6.2f,-182f);
+
             transform.position = new Vector3(20f, 6.4f, -168f);
         }
         else if(collision.gameObject.CompareTag("Yuki")){
-            if(Richard == null){
-                Richard = GameObject.FindWithTag("Richard");
-                Richard.transform.position = new Vector3(10f,6.4f,-182f);
-            }
+  
+            GameObject.FindWithTag("Richard").transform.position = new Vector3(10f,6.4f,-182f);
 
+            portal.SetActive(true);
             transform.position = new Vector3(20f, 6.4f, -168f);
         }
         else if(collision.gameObject.CompareTag("Gumball")){
@@ -94,11 +131,13 @@ public class DestroyObject : MonoBehaviour
 
         }
         else if(collision.gameObject.CompareTag("Teleport")){
+            coinText.SetActive(true);
             RenderSettings.skybox = otherSkybox;
             DynamicGI.UpdateEnvironment();
             transform.position = new Vector3(0, 5.4f, 0);
         }
         else if(collision.gameObject.CompareTag("Zombie")){
+            AudioSource.PlayClipAtPoint(eatingSound, transform.position);
             Destroy(gameObject);
             GameOverScreen.Setup(-3);
         }

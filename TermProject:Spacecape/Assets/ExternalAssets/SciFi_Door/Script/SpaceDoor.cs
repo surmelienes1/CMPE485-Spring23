@@ -9,6 +9,8 @@ public class SpaceDoor : MonoBehaviour {
 
 	GameObject thedoor;
 
+    public AudioClip doorOpen;
+
     void Start () {
     }
 
@@ -18,6 +20,7 @@ public class SpaceDoor : MonoBehaviour {
         {
             thedoor= GameObject.FindWithTag("SF_DoorSpace");
             thedoor.GetComponent<Animation>().Play("Spaceopen");
+            AudioSource.PlayClipAtPoint(doorOpen, other.transform.position);
         }
         
     }

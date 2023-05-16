@@ -38,6 +38,11 @@ public class ZombieFollowerControl : MonoBehaviour
     }
 
     private void Update(){
+        if (target == null)
+        {
+            m_animator.SetFloat("MoveSpeed", 0);
+            return;
+        }
         float dist = Vector3.Distance(target.position, transform.position);
         if(dist < 50)
         {

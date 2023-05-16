@@ -27,7 +27,6 @@ public class SwitchMusicTrigger : MonoBehaviour
     {
         if(other.gameObject.CompareTag("myPlayer"))
         {
-            Debug.Log("Switching music");
             if(newTrack != null)
             {
                 theAM.ChangeBGM(newTrack);

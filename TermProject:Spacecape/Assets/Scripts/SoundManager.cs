@@ -7,16 +7,18 @@ public class SoundManager : MonoBehaviour
     [SerializeField] Image soundOnIcon;
     [SerializeField] Image soundOffIcon;
     static public bool muted = false;
+    public AudioSource m_MyAudioSource;
     // Start is called before the first frame update
     void Start()
     {
+        m_MyAudioSource = FindObjectOfType<AudioSource>();
         if(!PlayerPrefs.HasKey("muted"))
         {
             PlayerPrefs.SetInt("muted", 0);
             Load();
         }
         UpdateButtonIcon();
-        AudioListener.pause = muted;
+        m_MyAudioSource.Play();
     }
 
     public void OnButtonPress()
@@ -24,13 +26,13 @@ public class SoundManager : MonoBehaviour
         if (muted == false)
         {
             muted = true;
-            AudioListener.pause = true;
+            m_MyAudioSource.mute = true;
 
         }
         else
         {
             muted = false;
-            AudioListener.pause = false;
+            m_MyAudioSource.mute = false;
 
         }
         Save();
