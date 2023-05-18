@@ -39,6 +39,17 @@ TagManager:
   - SpaceDoor3
   - Kratos
   - Zeus
+  - Door1
+  - Door2
+  - Door3
+  - Door4
+  - DarthVader
+  - Grogu
+  - Aku
+  - SamuraiJack
+  - Neo
+  - AgentSmith
+  - CircleSpaceStation
   layers:
   - Default
   - TransparentFX

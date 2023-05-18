@@ -11,12 +11,14 @@ public class SpaceDoor3 : MonoBehaviour {
 
     public AudioClip doorOpen;
 
+    public bool isCollided = false;
+
     void Start () {
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("myPlayer"))
+        if(isCollided && other.gameObject.CompareTag("myPlayer"))
         {
             thedoor= GameObject.FindWithTag("SpaceDoor2");
             thedoor.GetComponent<Animation>().Play("Spaceopen");
@@ -27,7 +29,7 @@ public class SpaceDoor3 : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.CompareTag("myPlayer"))
+        if(isCollided && other.gameObject.CompareTag("myPlayer"))
         {
 
             thedoor= GameObject.FindWithTag("SpaceDoor2");
